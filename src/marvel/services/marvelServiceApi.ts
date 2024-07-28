@@ -22,7 +22,13 @@ export default class MarvelServiceApi implements MarvelService {
             headers: {},
         });
         if (response.status === 200) {
-            return (await response.json()).data.results;
+            const heroes: Hero[] = (await response.json()).data.results;
+            // Replace http with https to prevent blocked requests
+            for (const hero of heroes) {
+                hero.thumbnail.path = hero.thumbnail.path.replace('http://', 'https://');
+                hero.comics.collectionURI = hero.comics.collectionURI.replace('http://', 'https://');
+            }
+            return heroes;
         } else {
             // Error Handling outside of the scope of this project
             return [];
@@ -35,7 +41,12 @@ export default class MarvelServiceApi implements MarvelService {
             headers: {},
         });
         if (response.status === 200) {
-            return (await response.json()).data.results;
+            const comics: Comic[] = (await response.json()).data.results;
+            // Replace http with https to prevent blocked requests
+            for (const comic of comics) {
+                comic.thumbnail.path = comic.thumbnail.path.replace('http://', 'https://');
+            }
+            return comics;
         } else {
             // Error Handling outside of the scope of this project
             return [];
