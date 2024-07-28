@@ -13,7 +13,7 @@ export default function Favorites() {
             hero.name.toUpperCase().includes(searchQuery.toUpperCase()) &&
             favoriteHeroIds.includes(hero.id)
         ));
-    }, [searchQuery, favoriteHeroIds]);
+    }, [heroes, searchQuery, favoriteHeroIds]);
 
     return (
         <>

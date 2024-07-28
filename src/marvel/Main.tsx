@@ -15,7 +15,7 @@ export default function Main() {
             setLoading(false);
         }
         fetchData();
-    }, []);
+    }, [marvelService, setHeroes]);
 
     return (
         <>
