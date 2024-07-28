@@ -20,10 +20,10 @@ export default function Search({ nrResults }: SearchProps) {
             <div className='searchBox'>
                 <img src={searchIcon} alt='Search' />
                 <div>
-                    <input name='search' type='text' value={searchQuery} onChange={handleChange} placeholder='Search a character...' />
+                    <input name='search' data-testid='search' type='text' value={searchQuery} onChange={handleChange} placeholder='Search a character...' />
                 </div>
             </div>
-            <div className='nrResults'>
+            <div className='nrResults' data-testid='nrResults'>
                 {`${nrResults} ${nrResults === 1 ? 'Result' : 'Results'}`}
             </div>
         </div>

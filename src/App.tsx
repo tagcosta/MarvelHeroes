@@ -3,8 +3,8 @@ import './App.css';
 import Main from './marvel/Main';
 import List from './marvel/views/list/List';
 import Favorites from './marvel/views/favorites/Favorites';
-import MarvelService from './marvel/services/marvelService';
 import { HeroesProvider } from './marvel/context/HeroesProvider';
+import MarvelServiceApi from './marvel/services/marvelServiceApi';
 
 const routes: RouteObject[] = [{
   path: '/',
@@ -26,7 +26,7 @@ const routes: RouteObject[] = [{
 }];
 
 export default function App() {
-  const marvelService = new MarvelService();
+  const marvelService = new MarvelServiceApi();
 
   return (
     <HeroesProvider marvelService={marvelService}>

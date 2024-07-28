@@ -1,6 +1,7 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
 import { Hero } from '../interfaces/hero';
 import MarvelService from '../services/marvelService';
+import MarvelServiceApi from '../services/marvelServiceApi';
 
 export interface HeroesState {
     marvelService: MarvelService;
@@ -11,7 +12,7 @@ export interface HeroesState {
 }
 
 export const HeroesContext = createContext<HeroesState>({
-    marvelService: new MarvelService(),
+    marvelService: new MarvelServiceApi(),
     heroes: [],
     setHeroes: () => { },
     searchQuery: '',
