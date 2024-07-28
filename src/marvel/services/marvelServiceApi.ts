@@ -10,7 +10,7 @@ export default class MarvelServiceApi implements MarvelService {
     comicsLimit: number;
 
     constructor() {
-        this.url = 'http://gateway.marvel.com/v1/';
+        this.url = 'https://gateway.marvel.com/v1/';
         this.heroesLimit = 50;
         this.apiKey = import.meta.env.VITE_API_PUBLIC_KEY;
         this.comicsLimit = 10;
