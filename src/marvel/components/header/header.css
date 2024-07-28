@@ -1,0 +1,41 @@
+#header {
+    height: 84px;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+}
+
+#headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+#headerContent a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#logo {
+    text-align: left;
+    width: 130px;
+    height: 52px;
+}
+
+#favourites {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#favouritesLogo {
+    width: 24px;
+    height: 22px;
+}
+
+@media only screen and (min-width: 600px) {
+    #headerContent {
+        padding: 16px 48px;
+    }
+}
