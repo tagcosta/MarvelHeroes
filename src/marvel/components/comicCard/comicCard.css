@@ -1,0 +1,21 @@
+.comicCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comicCard img {
+    width: 179px;
+    height: 269px;
+}
+
+.comicCard .title {
+    width: 179px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0;
+}
+
+.comicCard .year {
+    font-size: 12px;
+}

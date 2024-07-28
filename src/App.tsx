@@ -5,6 +5,7 @@ import List from './marvel/views/list/List';
 import Favorites from './marvel/views/favorites/Favorites';
 import { HeroesProvider } from './marvel/context/HeroesProvider';
 import MarvelServiceApi from './marvel/services/marvelServiceApi';
+import Details from './marvel/views/details/Details';
 
 const routes: RouteObject[] = [{
   path: '/',
@@ -21,6 +22,10 @@ const routes: RouteObject[] = [{
     {
       path: '/favorites',
       element: <Favorites />,
+    },
+    {
+      path: '/heroes/:id',
+      element: <Details />,
     },
   ],
 }];
