@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import useHeroesContext from './context/useHeroesContext';
 
 export default function Main() {
-    const { marvelService, setHeroes } = useHeroesContext();
+    const { marvelService, setHeroes, favoriteHeroIds } = useHeroesContext();
 
     useEffect(() => {
         async function fetchData() {
@@ -16,7 +16,7 @@ export default function Main() {
 
     return (
         <>
-            <Header nrFavorites={3} />
+            <Header nrFavorites={favoriteHeroIds.length} />
             <Outlet />
         </>
     );

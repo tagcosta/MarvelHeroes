@@ -1,7 +1,9 @@
 import { Hero } from '../../interfaces/hero';
 import './heroCard.css';
 import fav from '../../../assets/fav.png';
+import notFav from '../../../assets/notFav.png';
 import { Link } from 'react-router-dom';
+import useHeroesContext from '../../context/useHeroesContext';
 
 type HeroCardProps = {
     hero: Hero;
@@ -9,8 +11,14 @@ type HeroCardProps = {
 
 export default function HeroCard({ hero }: HeroCardProps) {
 
-    function toggleFavourite() {
-        // ToDo
+    const { favoriteHeroIds, setFavoriteHeroIds } = useHeroesContext();
+
+    function toggleFavorite() {
+        if (favoriteHeroIds.includes(hero.id)) {
+            setFavoriteHeroIds(favoriteHeroIds.filter(id => id !== hero.id));
+        } else {
+            setFavoriteHeroIds([...favoriteHeroIds, hero.id]);
+        }
     }
 
     return (
@@ -25,8 +33,8 @@ export default function HeroCard({ hero }: HeroCardProps) {
                     </div>
                 </div>
             </Link>
-            <button className='toggleFav' onClick={toggleFavourite}>
-                <img src={fav} alt="Toggle Favourite" />
+            <button className='toggleFav' onClick={toggleFavorite} data-testid='toggleFav'>
+                <img src={favoriteHeroIds.includes(hero.id) ? fav : notFav} alt="Toggle Favourite" />
             </button>
         </div>
     );

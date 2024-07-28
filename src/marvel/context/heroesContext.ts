@@ -9,6 +9,8 @@ export interface HeroesState {
     setHeroes: Dispatch<SetStateAction<Hero[]>>;
     searchQuery: string;
     setSearchQuery: Dispatch<SetStateAction<string>>;
+    favoriteHeroIds: number[];
+    setFavoriteHeroIds: Dispatch<SetStateAction<number[]>>;
 }
 
 export const HeroesContext = createContext<HeroesState>({
@@ -17,4 +19,6 @@ export const HeroesContext = createContext<HeroesState>({
     setHeroes: () => { },
     searchQuery: '',
     setSearchQuery: () => { },
+    favoriteHeroIds: [],
+    setFavoriteHeroIds: () => { },
 });
