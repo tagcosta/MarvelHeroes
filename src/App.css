@@ -1,6 +1,8 @@
 :root {
     --main-bg-color: black;
     --main-color: white;
+    --marvel-red: #EC1D24;
+    --placeholder-text: #AAAAAA;
 }
 
 body {

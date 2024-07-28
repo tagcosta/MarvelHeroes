@@ -3,6 +3,8 @@ import './App.css';
 import Main from './marvel/Main';
 import List from './marvel/views/list/List';
 import Favorites from './marvel/views/favorites/Favorites';
+import MarvelService from './marvel/services/marvelService';
+import { HeroesProvider } from './marvel/context/HeroesProvider';
 
 const routes: RouteObject[] = [{
   path: '/',
@@ -24,5 +26,11 @@ const routes: RouteObject[] = [{
 }];
 
 export default function App() {
-  return <RouterProvider router={createBrowserRouter(routes)} />;
+  const marvelService = new MarvelService();
+
+  return (
+    <HeroesProvider marvelService={marvelService}>
+      <RouterProvider router={createBrowserRouter(routes)} />
+    </HeroesProvider>
+  );
 }

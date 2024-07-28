@@ -1,0 +1,12 @@
+.heroesListContainer {
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 600px) {
+    .heroesListContainer {
+        padding: 16px 48px;
+    }
+}

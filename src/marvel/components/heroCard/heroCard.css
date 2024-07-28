@@ -1,0 +1,66 @@
+.heroCardContainer {
+    position: relative;
+}
+
+.heroCard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.heroCard .photo {
+    width: 173px;
+    height: 185px;
+    border-bottom: 5px solid var(--marvel-red);
+}
+
+.heroCard .photo img {
+    width: 173px;
+    height: 185px;
+}
+
+.heroCard .info {
+    position: relative;
+    overflow: hidden;
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 24px 16px;
+    font-size: 14px;
+    clip-path: polygon(0% 0%,
+            100% 0%,
+            100% 80%,
+            93% 100%,
+            0% 100%);
+}
+
+.heroCard .info .name {
+    text-transform: uppercase;
+    max-width: 126px;
+}
+
+.heroCardContainer button {
+    cursor: pointer;
+    border: none;
+    appearance: none;
+    background-color: inherit;
+    color: inherit;
+}
+
+.heroCardContainer a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.heroCardContainer .toggleFav {
+    position: absolute;
+    top: 206px;
+    right: 16px;
+}
+
+.heroCardContainer .toggleFav img {
+    width: 12px;
+    height: 11px;
+}
