@@ -17,7 +17,7 @@ export default function Header({ nrFavorites }: HeaderProps) {
                 <Link to='/favorites'>
                     <div id='favourites'>
                         <img id='favouritesLogo' src={fav} alt='Favourites' />
-                        <span >{nrFavorites ?? 0}</span>
+                        <span data-testid='nrFavorites'>{nrFavorites ?? 0}</span>
                     </div>
                 </Link>
             </div>
