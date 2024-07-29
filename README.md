@@ -42,7 +42,7 @@ Inside **src**, you can find the following structure:
 <pre>
 ├───assets: static images/logos
 ├───marvel
-│	|	Main.tsx: starting view of the root route and responsible for the initial load of data
+│	|   Main.tsx: starting view of the root route and responsible for the initial load of data
 │   ├───components: React components used by views
 │   │   ├───comicCard
 │   │   ├───header
