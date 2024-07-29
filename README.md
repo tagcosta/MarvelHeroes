@@ -16,17 +16,25 @@ This application is using **Vite** for its dev environment and bundler, **vitest
 ## **Commands**:
 
 To run the application, execute the following command:
-    npm run dev
-    
+```console
+npm run dev
+```
+
 To run the test suite, execute the following command:
-    npm run test
+```console
+npm run test
+```
 
 To run the linter (ESLint), execute the following command:
-    npm run lint
+```console
+npm run lint
+```
 
 The dist directory contains the build output with the .css and .js minimized and bundled.
 To regenerate the dist directory, execute the following command:
-    npm run build
+```console
+npm run build
+```
 
 ## **Architecture**:
 
